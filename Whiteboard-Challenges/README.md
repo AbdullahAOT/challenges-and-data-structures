@@ -9,3 +9,9 @@ this code will take input from user(size of the array and values of the array),
 then print the most frequent value in the array.
 
 ![Whitboard for MostFrequentNumber](Images/MostFrequentNumber.png)
+
+# Maximum Value Challenge
+this code will take input from user(size of the array and values of the array),
+and print the maximum number in that array.
+
+![Whitboard for MaxValue](Images/Maximum-Value.png)
