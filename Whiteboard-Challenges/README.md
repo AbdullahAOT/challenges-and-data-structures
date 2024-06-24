@@ -15,3 +15,9 @@ this code will remove the middle value in an array if the array length was odd,
 and remove the two middle values if the array length was even.
 
 ![Whiteboard for RemoveMiddleValue](Images/RemoveMiddleValue.png)
+
+# Insert Value in the middle of an array
+this code will insert a value in the middle of an array ,
+all inputs are taken from the user.
+
+![Whiteboard for InsertValueInTheMiddleOfArray](Images/InsertValueInTheMiddleOfArray.png)
