@@ -21,3 +21,9 @@ this code will insert a value in the middle of an array ,
 all inputs are taken from the user.
 
 ![Whiteboard for InsertValueInTheMiddleOfArray](Images/InsertValueInTheMiddleOfArray.png)
+
+# Maximum Value Challenge
+this code will take input from user(size of the array and values of the array),
+and print the maximum number in that array.
+
+![Whitboard for MaxValue](Images/Maximum-Value.png)
