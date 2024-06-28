@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicatesArray", "FindDuplicatesArray\FindDuplicatesArray.csproj", "{DCC928A1-857B-47F9-B333-89396594700A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicatesArrayTest", "FindDuplicatesArrayTest\FindDuplicatesArrayTest.csproj", "{69691865-EAEB-4E5A-8814-30F99659312B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{68C04DBC-3C5C-486C-BF1A-5BA3AD637DFF}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCC928A1-857B-47F9-B333-89396594700A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC928A1-857B-47F9-B333-89396594700A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC928A1-857B-47F9-B333-89396594700A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC928A1-857B-47F9-B333-89396594700A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69691865-EAEB-4E5A-8814-30F99659312B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69691865-EAEB-4E5A-8814-30F99659312B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69691865-EAEB-4E5A-8814-30F99659312B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69691865-EAEB-4E5A-8814-30F99659312B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2502EE6F-0E01-4910-94D9-AA43B795444D}
+	EndGlobalSection
+EndGlobal
