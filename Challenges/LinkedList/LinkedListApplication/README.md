@@ -7,3 +7,8 @@ Example input/output on console:
 Whiteboard:
 ![Whiteboard for LinkedList](Images/LinkedList1.png)
 ![Whiteboard for LinkedList](Images/LinkedList2.png)
+
+Example input/output on console for RemoveDuplicates Method:
+![Console Example](Images/RemoveDuplicatesConsole.png)
+Whiteboard for RemoveDuplicates Method:
+![Whiteboard for LinkedList](Images/RemoveDuplicates.png)

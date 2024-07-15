@@ -12,7 +12,7 @@ namespace LinkedListApplication
         public Node head;
         public Node tail;
         public int length;
-        public LinkedList() 
+        public LinkedList()
         {
             head = null;
             tail = null;
@@ -43,7 +43,7 @@ namespace LinkedListApplication
         public void PrintLinkedList()
         {
             Node node = this.head;
-            for(int i = 0; i < length; i++)
+            for (int i = 0; i < length; i++)
             {
                 Console.WriteLine(node.value);
                 node = node.next;
@@ -55,7 +55,7 @@ namespace LinkedListApplication
             Node node = this.head;
             for (int i = 0; i < length; i++)
             {
-                if(node.value == number)
+                if (node.value == number)
                 {
                     exist = true;
                     break;
@@ -84,15 +84,15 @@ namespace LinkedListApplication
                 }
                 node = node.next;
             }
-            if (exist==true)
+            if (exist == true)
             {
-                if(node == this.head)
+                if (node == this.head)
                 {
                     node.next.previous = null;
-                    head=node.next;
+                    head = node.next;
                     node.next = null;
                 }
-                else if(node == this.tail)
+                else if (node == this.tail)
                 {
                     node.previous.next = null;
                     tail = node.previous;
@@ -111,6 +111,38 @@ namespace LinkedListApplication
             else
             {
                 Console.WriteLine($"Number {number} does not exist in the Linked List");
+            }
+        }
+
+        public void RemoveDuplicates()
+        {
+            if (head == null) return;
+
+            HashSet<int> seenValues = new HashSet<int>();
+            Node current = head;
+            Node prev = null;
+
+            while (current != null)
+            {
+                if (seenValues.Contains(current.value))
+                {
+                    prev.next = current.next;
+                    if (current.next != null)
+                    {
+                        current.next.previous = prev;
+                    }
+                    else
+                    {
+                        tail = prev;
+                    }
+                    length--;
+                }
+                else
+                {
+                    seenValues.Add(current.value);
+                    prev = current;
+                }
+                current = current.next;
             }
         }
     }
