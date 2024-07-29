@@ -12,3 +12,8 @@ Example input/output on console for RemoveDuplicates Method:
 ![Console Example](Images/RemoveDuplicatesConsole.png)
 Whiteboard for RemoveDuplicates Method:
 ![Whiteboard for LinkedList](Images/RemoveDuplicates.png)
+
+Example input/output on console for Merge Sorted Linked Lists Method:
+![Console Example](Images/MergeSortedListsConsole.png)
+Whiteboard for RemoveDuplicates Method:
+![Whiteboard for LinkedList](Images/MergeSortedLists.png)
