@@ -7,3 +7,10 @@ Example input/output on console:
 Whiteboard:
 ![Whiteboard for StackQueue](Images/StackQueue1.png)
 ![Whiteboard for StackQueue](Images/StackQueue2.png)
+
+# ReverseStackUsingQueue
+
+Example input/output on console:
+![Console Example](Images/ReverseStackUsingQueueConsole.png)
+Whiteboard:
+![Whiteboard for StackQueue](Images/ReverseStackUsingQueue.png)
