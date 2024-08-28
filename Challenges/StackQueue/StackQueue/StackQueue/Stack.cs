@@ -76,5 +76,31 @@ namespace StackQueue
         {
             return length == 0 ? true : false;
         }
+
+    }
+    public class StackWithDeleteMiddle : Stack
+    {
+        public void DeleteMiddle()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("Stack is empty. Nothing to delete.");
+            }
+
+            int middleIndex = length / 2;  
+            Stack tempStack = new Stack();
+
+            for (int i = 0; i < middleIndex; i++)
+            {
+                tempStack.Push(Pop().value);
+            }
+
+            Pop();
+
+            while (!tempStack.IsEmpty())
+            {
+                Push(tempStack.Pop().value);
+            }
+        }
     }
 }
