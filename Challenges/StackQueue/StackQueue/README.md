@@ -14,3 +14,10 @@ Example input/output on console:
 ![Console Example](Images/ReverseStackUsingQueueConsole.png)
 Whiteboard:
 ![Whiteboard for StackQueue](Images/ReverseStackUsingQueue.png)
+
+# Stack Delete Middle Value
+
+Example input/output on console:
+![Console Example](Images/StackDeleteMiddleConsole.png)
+Whiteboard:
+![Whiteboard for StackQueue](Images/StackDeleteMiddle.png)

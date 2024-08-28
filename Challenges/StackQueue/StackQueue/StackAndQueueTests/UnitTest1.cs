@@ -59,5 +59,57 @@ namespace StackAndQueueTests
             queue.Dequeue();
             Assert.Equal(true, queue.IsEmpty());
         }
+        [Fact]
+        public void DeleteMiddle_OddNumberOfElements_RemovesMiddleElement()
+        {
+            StackWithDeleteMiddle stack = new StackWithDeleteMiddle();
+            stack.Push(7);
+            stack.Push(14);
+            stack.Push(3);
+            stack.Push(8);
+            stack.Push(5);
+
+            stack.DeleteMiddle();
+
+            Assert.Equal(4, stack.length);
+            Assert.Equal(5, stack.Peek().value);
+            // Add more assertions to check the order of elements
+        }
+
+        [Fact]
+        public void DeleteMiddle_EvenNumberOfElements_RemovesLowerMiddleElement()
+        {
+            StackWithDeleteMiddle stack = new StackWithDeleteMiddle();
+            stack.Push(7);
+            stack.Push(14);
+            stack.Push(3);
+            stack.Push(8);
+
+            stack.DeleteMiddle();
+
+            Assert.Equal(3, stack.length);
+            Assert.Equal(8, stack.Peek().value);
+            // Add more assertions to check the order of elements
+        }
+
+        [Fact]
+        public void DeleteMiddle_OneElement_RemovesElement()
+        {
+            StackWithDeleteMiddle stack = new StackWithDeleteMiddle();
+            stack.Push(7);
+
+            stack.DeleteMiddle();
+
+            Assert.Equal(0, stack.length);
+            Assert.True(stack.IsEmpty());
+        }
+
+        [Fact]
+        public void DeleteMiddle_EmptyStack_ThrowsException()
+        {
+            StackWithDeleteMiddle stack = new StackWithDeleteMiddle();
+
+            Assert.Throws<Exception>(() => stack.DeleteMiddle());
+        }
     }
 }
