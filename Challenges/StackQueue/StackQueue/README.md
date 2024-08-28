@@ -21,3 +21,10 @@ Example input/output on console:
 ![Console Example](Images/StackDeleteMiddleConsole.png)
 Whiteboard:
 ![Whiteboard for StackQueue](Images/StackDeleteMiddle.png)
+
+# Stack Minimum value
+
+Example input/output on console:
+![Console Example](Images/MinStackConsole.png)
+Whiteboard:
+![Whiteboard for StackQueue](Images/MinStackWhiteboard.png)
