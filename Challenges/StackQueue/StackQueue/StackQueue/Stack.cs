@@ -103,4 +103,68 @@ namespace StackQueue
             }
         }
     }
+    public class MinStack
+    {
+        private Stack<int> stack;
+        private Stack<int> minStack;
+
+        public MinStack()
+        {
+            stack = new Stack<int>();
+            minStack = new Stack<int>();
+        }
+
+        public void Push(int value)
+        {
+            stack.Push(value);
+            if (minStack.Count == 0 || value <= minStack.Peek())
+            {
+                minStack.Push(value);
+            }
+        }
+
+        public int Pop()
+        {
+            if (stack.Count == 0)
+                throw new InvalidOperationException("Stack is empty");
+
+            int value = stack.Pop();
+            if (value == minStack.Peek())
+            {
+                minStack.Pop();
+            }
+            return value;
+        }
+
+        public int Top()
+        {
+            if (stack.Count == 0)
+                throw new InvalidOperationException("Stack is empty");
+
+            return stack.Peek();
+        }
+
+        public bool IsEmpty()
+        {
+            return stack.Count == 0;
+        }
+
+        public int GetMin()
+        {
+            if (minStack.Count == 0)
+                throw new InvalidOperationException("Stack is empty");
+
+            return minStack.Peek();
+        }
+
+        public void PrintStack()
+        {
+            Console.Write("Stack: Top -> ");
+            foreach (var item in stack)
+            {
+                Console.Write(item + " -> ");
+            }
+            Console.WriteLine("null");
+        }
+    }
 }

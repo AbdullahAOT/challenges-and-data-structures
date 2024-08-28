@@ -73,7 +73,6 @@ namespace StackAndQueueTests
 
             Assert.Equal(4, stack.length);
             Assert.Equal(5, stack.Peek().value);
-            // Add more assertions to check the order of elements
         }
 
         [Fact]
@@ -89,7 +88,6 @@ namespace StackAndQueueTests
 
             Assert.Equal(3, stack.length);
             Assert.Equal(8, stack.Peek().value);
-            // Add more assertions to check the order of elements
         }
 
         [Fact]
@@ -110,6 +108,46 @@ namespace StackAndQueueTests
             StackWithDeleteMiddle stack = new StackWithDeleteMiddle();
 
             Assert.Throws<Exception>(() => stack.DeleteMiddle());
+        }
+        [Fact]
+        public void TestPushAndGetMin()
+        {
+            MinStack minStack = new MinStack();
+            minStack.Push(10);
+            minStack.Push(5);
+            minStack.Push(20);
+            Assert.Equal(5, minStack.GetMin());
+
+            minStack.Push(3);
+            Assert.Equal(3, minStack.GetMin());
+        }
+
+        [Fact]
+        public void TestPopAndGetMin()
+        {
+            MinStack minStack = new MinStack();
+            minStack.Push(10);
+            minStack.Push(5);
+            minStack.Push(20);
+            minStack.Push(3);
+            Assert.Equal(3, minStack.GetMin());
+
+            minStack.Pop();
+            Assert.Equal(5, minStack.GetMin());
+        }
+
+        [Fact]
+        public void TestTopAndIsEmpty()
+        {
+            MinStack minStack = new MinStack();
+            Assert.True(minStack.IsEmpty());
+
+            minStack.Push(10);
+            Assert.False(minStack.IsEmpty());
+            Assert.Equal(10, minStack.Top());
+
+            minStack.Push(5);
+            Assert.Equal(5, minStack.Top());
         }
     }
 }
