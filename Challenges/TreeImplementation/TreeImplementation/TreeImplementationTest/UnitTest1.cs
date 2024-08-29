@@ -240,5 +240,53 @@ namespace TreeImplementationTest
             var exception = Assert.Throws<InvalidOperationException>(() => tree.FindSecondMax());
             Assert.Equal("Tree has fewer than two unique values", exception.Message);
         }
+        [Fact]
+        public void TestSumOfLeafNodes()
+        {
+            // Arrange
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(9);
+            Btree.Root.Left = new Node(8);
+            Btree.Root.Right = new Node(12);
+            Btree.Root.Left.Left = new Node(3);
+            Btree.Root.Left.Right = new Node(7);
+            Btree.Root.Right.Left = new Node(17);
+            Btree.Root.Right.Right = new Node(23);
+            Btree.Root.Left.Left.Right = new Node(4);
+
+            // Act
+            int leafSum = Btree.SumOfLeafNodes();
+
+            // Assert
+            Assert.Equal(51, leafSum); // 4 + 7 + 17 + 23 = 51
+        }
+
+        [Fact]
+        public void TestEmptyTree()
+        {
+            // Arrange
+            BinaryTree Btree = new BinaryTree();
+
+            // Act
+            int leafSum = Btree.SumOfLeafNodes();
+
+            // Assert
+            Assert.Equal(0, leafSum);
+        }
+
+        [Fact]
+        public void TestSingleNodeTree()
+        {
+            // Arrange
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(5);
+
+            // Act
+            int leafSum = Btree.SumOfLeafNodes();
+
+            // Assert
+            Assert.Equal(5, leafSum);
+        }
+
     }
 }
