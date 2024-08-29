@@ -70,5 +70,38 @@ namespace TreeImplementation
         {
             return InOrder(node);
         }
+
+        public int? FindSecondMax()
+        {
+            if (Root == null) throw new InvalidOperationException("Tree is empty");
+
+            int? max = null;
+            int? secondMax = null;
+
+            void Traverse(Node node)
+            {
+                if (node == null) return;
+
+                if (max == null || node.Data > max)
+                {
+                    secondMax = max;
+                    max = node.Data;
+                }
+                else if (node.Data < max && (secondMax == null || node.Data > secondMax))
+                {
+                    secondMax = node.Data;
+                }
+
+                Traverse(node.Left);
+                Traverse(node.Right);
+            }
+
+            Traverse(Root);
+
+            if (secondMax == null)
+                throw new InvalidOperationException("Tree has fewer than two unique values");
+
+            return secondMax;
+        }
     }
 }
