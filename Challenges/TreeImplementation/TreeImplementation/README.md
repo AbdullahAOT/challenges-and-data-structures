@@ -18,3 +18,10 @@ Console:
 ![Console for Tree Second Max Value](Images/SecondMaxConsole.png)
 Whiteboard:
 ![Whiteboard for Tree Second Max Value](Images/SecondMax.png)
+
+# Tree Leafs Sum Implementation
+
+Console:
+![Console for Leafs Sum](Images/LeafSumConsole.png)
+Whiteboard:
+![Whiteboard for Leafs Sum](Images/LeafSum.png)
