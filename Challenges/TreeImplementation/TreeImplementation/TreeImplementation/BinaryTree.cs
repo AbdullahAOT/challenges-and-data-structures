@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TreeImplementation
 {
@@ -55,6 +52,23 @@ namespace TreeImplementation
                 Print(node.Right, indent + (isLeft ? "│   " : "    "), false);
             }
         }
-    }
 
+        public void MirrorTree(Node node)
+        {
+            if (node == null)
+                return;
+
+            Node temp = node.Left;
+            node.Left = node.Right;
+            node.Right = temp;
+
+            MirrorTree(node.Left);
+            MirrorTree(node.Right);
+        }
+
+        public List<int> InOrderTraversal(Node node)
+        {
+            return InOrder(node);
+        }
+    }
 }
