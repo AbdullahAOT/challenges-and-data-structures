@@ -164,5 +164,81 @@ namespace TreeImplementationTest
             Assert.Equal(expectedOriginalInOrder, originalInOrder);
             Assert.Equal(expectedMirroredInOrder, mirroredInOrder);
         }
+        [Fact]
+        public void TestFindSecondMax_WithMultipleNodes()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(10);
+            tree.Root.Left = new Node(5);
+            tree.Root.Right = new Node(20);
+            tree.Root.Left.Left = new Node(3);
+            tree.Root.Left.Right = new Node(7);
+            tree.Root.Right.Left = new Node(15);
+            tree.Root.Right.Right = new Node(25);
+
+            int expectedSecondMax = 20;
+
+            // Act
+            int? secondMax = tree.FindSecondMax();
+
+            // Assert
+            Assert.Equal(expectedSecondMax, secondMax);
+        }
+
+        [Fact]
+        public void TestFindSecondMax_WithSingleNode()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(10);
+
+            // Act & Assert
+            var exception = Assert.Throws<InvalidOperationException>(() => tree.FindSecondMax());
+            Assert.Equal("Tree has fewer than two unique values", exception.Message);
+        }
+
+        [Fact]
+        public void TestFindSecondMax_WithEmptyTree()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+
+            // Act & Assert
+            var exception = Assert.Throws<InvalidOperationException>(() => tree.FindSecondMax());
+            Assert.Equal("Tree is empty", exception.Message);
+        }
+
+        [Fact]
+        public void TestFindSecondMax_WithNegativeValues()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(-10);
+            tree.Root.Left = new Node(-20);
+            tree.Root.Right = new Node(-5);
+
+            int expectedSecondMax = -10;
+
+            // Act
+            int? secondMax = tree.FindSecondMax();
+
+            // Assert
+            Assert.Equal(expectedSecondMax, secondMax);
+        }
+
+        [Fact]
+        public void TestFindSecondMax_WithIdenticalValues()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(10);
+            tree.Root.Left = new Node(10);
+            tree.Root.Right = new Node(10);
+
+            // Act & Assert
+            var exception = Assert.Throws<InvalidOperationException>(() => tree.FindSecondMax());
+            Assert.Equal("Tree has fewer than two unique values", exception.Message);
+        }
     }
 }
