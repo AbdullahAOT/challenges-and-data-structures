@@ -146,6 +146,7 @@ namespace LinkedListApplication
             }
         }
 
+
         public void RotateLeft(int k)
         {
             if (head == null || k == 0 || k % length == 0) return;
@@ -169,6 +170,28 @@ namespace LinkedListApplication
             tail = newTail;
         }
 
-
+        public LinkedList MergeSortedLists(LinkedList l1, LinkedList l2)
+        {
+            List<int> combinedList = new List<int>();
+            Node node1 = l1.head;
+            for(int i = 0; i < l1.length; i++)
+            {
+                combinedList.Add(node1.value);
+                node1 = node1.next;
+            }
+            Node node2 = l2.head;
+            for (int i = 0; i < l2.length; i++)
+            {
+                combinedList.Add(node2.value);
+                node2 = node2.next;
+            }
+            combinedList.Sort();
+            LinkedList finalLinkedList = new LinkedList();
+            for(int i = 0;i < combinedList.Count; i++)
+            {
+                finalLinkedList.AddToLinkedList(combinedList[i]);
+            }
+            return finalLinkedList;
+        }
     }
 }
