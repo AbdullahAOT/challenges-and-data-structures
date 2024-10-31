@@ -36,4 +36,9 @@ Whiteboard:
 # Tree RightView
 
 Whiteboard:
-![Whiteboard for Largest Level](Images/BinaryTreeRightView.png)
+![Whiteboard for RightView](Images/BinaryTreeRightView.png)
+
+# Tree LargestLevelNodes
+
+Whiteboard:
+![Whiteboard for Max Level Nodes](Images/BinaryTreeLargestLevelNodes.png)
