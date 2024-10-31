@@ -145,5 +145,30 @@ namespace LinkedListApplication
                 current = current.next;
             }
         }
+
+        public void RotateLeft(int k)
+        {
+            if (head == null || k == 0 || k % length == 0) return;
+
+            k = k % length;
+
+            Node newTail = head;
+            for (int i = 1; i < k; i++)
+            {
+                newTail = newTail.next;
+            }
+            Node newHead = newTail.next;
+
+            newTail.next = null;
+            newHead.previous = null;
+
+            tail.next = head;
+            head.previous = tail;
+
+            head = newHead;
+            tail = newTail;
+        }
+
+
     }
 }

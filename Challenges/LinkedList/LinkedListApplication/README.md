@@ -12,3 +12,10 @@ Example input/output on console for RemoveDuplicates Method:
 ![Console Example](Images/RemoveDuplicatesConsole.png)
 Whiteboard for RemoveDuplicates Method:
 ![Whiteboard for LinkedList](Images/RemoveDuplicates.png)
+
+# Linked List Rotate By K Implementation
+
+Example input/output on console:
+![Console Example](Images/LinkedListRotateByK__Console.png)
+Whiteboard:
+![Whiteboard for LinkedListRotateByK](Images/LinkedListRotateByK_Whiteboard.png)
