@@ -157,6 +157,43 @@ namespace TreeImplementation
 
             return largestValues;
         }
+
+        public List<int> PrintRightView()
+        {
+            List<int> rightView = new List<int>();
+            if (Root == null) return rightView;
+
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(Root);
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+                Node rightmostNode = null;
+
+                for (int i = 0; i < levelSize; i++)
+                {
+                    Node node = queue.Dequeue();
+                    rightmostNode = node;
+
+                    if (node.Left != null)
+                    {
+                        queue.Enqueue(node.Left);
+                    }
+                    if (node.Right != null)
+                    {
+                        queue.Enqueue(node.Right);
+                    }
+                }
+
+                // Add the rightmost node of the current level to the list
+                rightView.Add(rightmostNode.Data);
+            }
+
+            return rightView;
+        }
+
+
     }
 
 }

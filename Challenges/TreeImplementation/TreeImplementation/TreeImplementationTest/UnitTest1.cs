@@ -337,5 +337,47 @@ namespace TreeImplementationTest
             Assert.Single(largestValues);
             Assert.Equal(42, largestValues[0]);
         }
+
+        [Fact]
+        public void TestPrintRightView_CorrectRightView()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+            tree.Root.Right.Right = new Node(6);
+            tree.Root.Left.Right.Left = new Node(7);
+
+            List<int> expectedRightView = new List<int> { 1, 3, 6, 7 };
+
+            // Act
+            List<int> actualRightView = tree.PrintRightView();
+
+            // Assert
+            Assert.Equal(expectedRightView, actualRightView);
+        }
+
+        [Fact]
+        public void TestPrintRightView_RightSkewedTree()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(10);
+            tree.Root.Right = new Node(20);
+            tree.Root.Right.Right = new Node(30);
+            tree.Root.Right.Right.Right = new Node(40);
+
+            List<int> expectedRightView = new List<int> { 10, 20, 30, 40 };
+
+            // Act
+            List<int> actualRightView = tree.PrintRightView();
+
+            // Assert
+            Assert.Equal(expectedRightView, actualRightView);
+        }
     }
+
 }
